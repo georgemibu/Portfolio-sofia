@@ -1,0 +1,590 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* NAVBAR GENERAL */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    z-index: 30; /* por encima de todo */
+}
+
+/* MITAD IZQUIERDA DEL NAVBAR */
+.nav-left {
+    width: 45%;
+    background: #1b1b1b;       /* fondo negro */
+    color: white;           /* texto blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* MITAD DERECHA DEL NAVBAR */
+.nav-right {
+    width: 55%;
+    background: #b3b3b3;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-right li {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.nav-right li.active,
+.nav-right li:hover {
+    opacity: 1;
+    font-weight: bold;
+    border-bottom: 2px solid #9d3bff;
+    padding-bottom: 4px;
+}
+
+/* CONTENEDOR DE LAS DOS MITADES */
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* PANELES */
+.left-panel {
+    width: 45%;
+    background: #1b1b1b;
+    position: relative;
+}
+
+.right-panel {
+    width: 55%;
+    background: #9d3bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-box {
+    width: 220px;
+    height: 65vh;
+    background: #e0e0e0;
+    margin: 150px 0 0 0px;
+}
+
+/* CONTENIDO CENTRADO */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.center-content h1 {
+    font-size: 110px;
+    line-height: 1.1;
+}
+
+.tag {
+    background: #7300FF;
+    padding: 10px 20px;
+    font-size: 48px;
+    margin-top: 25px;
+}
+
+
+
+/* Sección about */
+
+
+.about-section {
+    width: 100%;
+    background: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    gap: 80px;
+    padding-right: 49px;
+}
+
+/* CONTENEDOR DE LA IMAGEN */
+.about-image-wrapper {
+    position: relative;
+    width: 590px;
+    height: 816px;
+}
+
+/* CUADRADOS DE FONDO */
+.square-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 751px;
+    background: #000;
+    z-index: 1;
+}
+
+.square-front {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 95%;
+    height: 816px;
+    background: #222;
+    z-index: 2;
+}
+
+/* IMAGEN */
+.about-image {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 100%;
+    height: 816px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    z-index: 3;
+}
+
+/* CÍRCULOS */
+.circles {
+    position: absolute;
+    top: 17px;
+    right: 40px;
+    display: flex;
+    gap: 15px;
+    z-index: 4;
+}
+
+.circle {
+    display: block;
+    border-radius: 50%;
+    background: #7300FF;
+}
+
+.circle.big {
+    width: 55px;
+    height: 55px;
+}
+
+.circle.small {
+    width: 25px;
+    height: 25px;
+}
+
+/* TEXTO A LA DERECHA */
+.about-text {
+    width: 550px;
+    font-size: 32px;
+}
+
+.about-title {
+    font-size: 64px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 35px;
+
+}
+
+
+/* SUBRAYADO VIOLETA DEL TÍTULO */
+.about-title::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    bottom: 6px;
+    left: 0;
+    background: #7300FF;
+}
+
+
+
+/* Work */
+
+.work-section {
+    width: 100%;
+    height: 1200px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* TÍTULO */
+.work-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.work-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:26px;
+}
+.work-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -20px;
+}
+
+.dot.big {
+    width: 25px;
+    height: 25px;
+    background: #7300FF;
+    border-radius: 50%;
+}
+
+.dot.small {
+    width: 16px;
+    height: 16px;
+    background: #7300FF;
+    border-radius: 50%;
+}
+
+/* TABS */
+.work-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 25px 0;
+}
+
+.tab {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.tab.active {
+    opacity: 1;
+    border-bottom: 2px solid #7300FF;
+    padding-bottom: 4px;
+    font-weight: 700;
+}
+
+/* SLIDER */
+.slider-container {
+    width: 1248px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider-wrapper {
+    display: flex;
+    width: calc(1248px * 4); /* 4 categorías */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 1248px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* OVERLAY */
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(115, 0, 255, 0.85); /* violeta con transparencia */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    padding: 20px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* TÍTULO Y TEXTO */
+.overlay h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.overlay p {
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 260px;
+}
+
+.slide .card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.slide .card:nth-child(1) { animation-delay: 0.05s; }
+.slide .card:nth-child(2) { animation-delay: 0.10s; }
+.slide .card:nth-child(3) { animation-delay: 0.15s; }
+.slide .card:nth-child(4) { animation-delay: 0.20s; }
+.slide .card:nth-child(5) { animation-delay: 0.25s; }
+.slide .card:nth-child(6) { animation-delay: 0.30s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-title {
+    overflow: hidden;
+}
+
+.about-title::after {
+    width: 0;
+    transition: width 0.6s ease;
+}
+
+.about-title:hover::after {
+    width: 100%;
+}
+
+.circles .circle {
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+.circles .circle.small {
+    animation-delay: 0.8s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+.dot.small {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+.tab {
+    transition: all 0.25s ease;
+}
+
+.tab:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.10s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.20s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.30s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ANIMACIÓN DE ENTRADA DEL NAVBAR */
+.navbar {
+    animation: navbarFade 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@keyframes navbarFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: #7300FF;
+    animation: slideLine 1.2s ease-out forwards;
+}
+
+@keyframes slideLine {
+    to { left: 0; }
+}
+
+.nav-left:hover,
+.nav-right li:hover {
+    text-shadow: 0 0 12px #9d3bff;
+    transition: text-shadow 0.3s ease;
+}
+
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+
+body.scrolled .navbar {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.nav-right li {
+    position: relative;
+}
+
+.nav-right li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #7300FF;
+    transition: width 0.3s ease;
+}
+
+.nav-right li:hover::after,
+.nav-right li.active::after {
+    width: 100%;
+}
+
+.nav-left {
+    background: linear-gradient(90deg, #0d0d0d, #1b1b1b);
+    animation: gradientMove 6s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.left-panel {
+    animation: leftIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+.right-panel {
+    animation: rightIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes leftIn {
+    0% { transform: translateX(-60px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes rightIn {
+    0% { transform: translateX(60px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+
+.tag {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 0px #7300ff;
+    }
+    50% {
+        box-shadow: 0 0 18px #7300ff;
+    }
+    100% {
+        box-shadow: 0 0 0px #7300ff;
+    }
+}
+
+.center-content h1 {
+    opacity: 0;
+    animation: fadeText 1.6s ease forwards;
+}
+
+@keyframes fadeText {
+    0% { opacity: 0; letter-spacing: 20px; }
+    100% { opacity: 1; letter-spacing: 0px; }
+}
+
+.center-content {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -53%); }
+    100% { transform: translate(-50%, -50%); }
+}
+
